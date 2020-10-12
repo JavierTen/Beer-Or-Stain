@@ -21,15 +21,8 @@ public class NewCardShow : MonoBehaviour
             Debug.Log("Time has run out!");
             timeRemaining = 10;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = cardNew;
-            x = 0.2156625f;
-            y = 0.2178207f;
-            z = 1f;
-            transform.localScale = new Vector3(x, y, z);
+            transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
         }
-        //x = 0.2135238;
-        //y = 0.2194251;
-        //z = 1;
-        //this.gameObject.GetComponent<SpriteRenderer>().sprite = cardNew;
-        //transform.localScale = new Vector3 (x,y,z);
+
     }
 }
