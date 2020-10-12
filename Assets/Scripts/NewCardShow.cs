@@ -28,11 +28,7 @@ public class NewCardShow : MonoBehaviour
                 transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
             }
         }
-        if (Input.GetMouseButtonDown(0))
-        { 
-            Debug.Log("Pressed primary button.");
-            ChangeGameRunningState();
-        }
+        
         
 
     }
