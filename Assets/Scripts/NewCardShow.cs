@@ -4,24 +4,50 @@ using UnityEngine;
 
 public class NewCardShow : MonoBehaviour
 {
+    
     public Sprite cardNew;
     // Update is called once per frame
     float x, y, z;
     public float timeRemaining = 10;
+    private bool gamerunning;
+
+    
 
     void Update()
     {
-
-        if (timeRemaining > 0)
+        if (!gamerunning)
         {
-            timeRemaining -= Time.deltaTime;
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                timeRemaining = 10;
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = cardNew;
+                transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
+            }
+        }
+        if (Input.GetMouseButtonDown(0))
+        { 
+            Debug.Log("Pressed primary button.");
+            ChangeGameRunningState();
+        }
+        
+
+    }
+    public void ChangeGameRunningState()
+    {
+        
+        gamerunning = !gamerunning;
+
+        if (gamerunning)
+        {
+            Debug.Log("Game corriendo");
         }
         else
-        { 
-            timeRemaining = 10;
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = cardNew;
-            transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
+        {
+            Debug.Log("game paused");
         }
-
     }
 }
