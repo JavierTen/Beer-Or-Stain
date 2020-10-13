@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 532721578}
   - component: {fileID: 532721577}
   - component: {fileID: 532721576}
+  - component: {fileID: 532721579}
   m_Layer: 5
   m_Name: Btn_Join
   m_TagString: Untagged
@@ -643,6 +644,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 532721579}
+        m_MethodName: UniserPartida
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &532721577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +692,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532721574}
   m_CullTransparentMesh: 0
+--- !u!114 &532721579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532721574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e82c3703ee8f6e4abb95e6414165086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nick: {fileID: 1761820199}
+  partida: {fileID: 1201731514}
 --- !u!1 &584047534
 GameObject:
   m_ObjectHideFlags: 0
