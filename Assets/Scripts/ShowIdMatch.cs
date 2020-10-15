@@ -22,7 +22,7 @@ public class ShowIdMatch : MonoBehaviour
 
     public float timeRemaining = 1;
     private bool gamerunning;
-
+    ArrayList jugador = new ArrayList();
     //static var dPartida;
 
     void Update()
@@ -35,7 +35,7 @@ public class ShowIdMatch : MonoBehaviour
             }
             else
             {
-                timeRemaining = 10;
+                timeRemaining = 1;
                 try
                 {
                     Debug.Log(idPartida);
@@ -45,15 +45,22 @@ public class ShowIdMatch : MonoBehaviour
                     conexion = new MySqlConnection(DataConecction);
                     consola = new MySqlCommand(Query, conexion);
 
+
+
+                    string nicks = "";
                     conexion.Open();
-                    object result = consola.ExecuteScalar();
-                    if (result != null)
+                    MySqlDataReader reader = consola.ExecuteReader();
+                    while (reader.Read())
                     {
-
-
-                        jugadores.text = result+"\n";
-                        Debug.Log(jugadores);
+                        nicks = nicks + reader["nombre"]+"\n";
+                        
                     }
+                    jugadores.text = nicks.ToString();
+                    foreach (var item in jugador)
+                    {
+                        Debug.Log(item);
+                    }
+                    //Debug.Log(jugador);
                     conexion.Close();
 
                 }

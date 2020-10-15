@@ -427,7 +427,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 58453
+  m_Text: -------------
 --- !u!222 &313106354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -763,6 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idPartida: {fileID: 313106353}
+  jugadores: {fileID: 66533138}
   timeRemaining: 1
 --- !u!4 &1573682131
 Transform:
