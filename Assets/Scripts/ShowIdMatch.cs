@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Random;
 using UnityEngine.UI;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System;
+
 
 
 
@@ -129,12 +128,13 @@ public class ShowIdMatch : MonoBehaviour
             conexion = new MySqlConnection(DataConecction);
             consola = new MySqlCommand(Query, conexion);
 
+            int r = Random.Range(0,3);
+
             conexion.Open();
             object result = consola.ExecuteScalar();
             if (result != null)
             {
-                r = Convert.ToInt32(result);
-                Debug.Log("ultima partida: " + r);
+                
                 idPartida.text = r.ToString();
                 
             }
