@@ -12,6 +12,10 @@ public class ShowIdMatch : MonoBehaviour
 {
     private MySqlConnection conexion;
     private MySqlCommand consola;
+
+    private MySqlConnection conexion2;
+    private MySqlCommand consola2;
+
     string r = "";
     public Text idPartida;
     public Text jugadores;
@@ -107,16 +111,38 @@ public class ShowIdMatch : MonoBehaviour
         cardsplayers.Add("R8");
         cardsplayers.Add("R9");
 
-        cardsplayers.Add("RegA");
-        cardsplayers.Add("RegC");
-        cardsplayers.Add("RegJ");
-        cardsplayers.Add("RegM");
-        cardsplayers.Add("RegP");
-        cardsplayers.Add("RegU");
-        cardsplayers.Add("RegK");
-        cardsplayers.Add("RegN");
-        cardsplayers.Add("RegR");
-        cardsplayers.Add("RegV");
+        cardsplayers.Add("RegA0");
+        cardsplayers.Add("RegC0");
+        cardsplayers.Add("RegJ0");
+        cardsplayers.Add("RegM0");
+        cardsplayers.Add("RegP0");
+        cardsplayers.Add("RegU0");
+        cardsplayers.Add("RegK0");
+        cardsplayers.Add("RegN0");
+        cardsplayers.Add("RegR0");
+        cardsplayers.Add("RegV0");
+
+        cardsplayers.Add("RegA1");
+        cardsplayers.Add("RegC1");
+        cardsplayers.Add("RegJ1");
+        cardsplayers.Add("RegM1");
+        cardsplayers.Add("RegP1");
+        cardsplayers.Add("RegU1");
+        cardsplayers.Add("RegK1");
+        cardsplayers.Add("RegN1");
+        cardsplayers.Add("RegR1");
+        cardsplayers.Add("RegV1");
+
+        cardsplayers.Add("RegA2");
+        cardsplayers.Add("RegC2");
+        cardsplayers.Add("RegJ2");
+        cardsplayers.Add("RegM2");
+        cardsplayers.Add("RegP2");
+        cardsplayers.Add("RegU2");
+        cardsplayers.Add("RegK2");
+        cardsplayers.Add("RegN2");
+        cardsplayers.Add("RegR2");
+        cardsplayers.Add("RegV2");
     }
 
     public float timeRemaining = 1;
@@ -235,7 +261,7 @@ public class ShowIdMatch : MonoBehaviour
 
                 string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
 
-                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cardspiramide[mIndex] + "'," + r + ");";
+                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES (' "+ cardspiramide[mIndex] + "'," + r + ");";
                 cardspiramide.RemoveAt(mIndex);
 
 
@@ -264,7 +290,7 @@ public class ShowIdMatch : MonoBehaviour
         {
 
             string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-            string Query = "SELECT idJugador FROM bosdb.jugador WHERE idPartida = "+r+";";
+            string Query = "SELECT idJugador FROM bosdb.jugador WHERE idPartida = " + r + ";";
 
             conexion = new MySqlConnection(DataConecction);
             consola = new MySqlCommand(Query, conexion);
@@ -276,13 +302,14 @@ public class ShowIdMatch : MonoBehaviour
             MySqlDataReader reader = consola.ExecuteReader();
             while (reader.Read())
             {
-                idJugadores = reader["idJugador"].ToString();
 
-                try
+                idJugadores = reader["idJugador"].ToString();
+                for (int i = 0; i < 5; i++)
                 {
-                    int mIndex = Random.Range(0, 69);
+                    int mIndex2 = Random.Range(0, 69);
                     string DataConecction2 = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-                    string Query2 = "INSERT INTO bosdb.cartajugador (nombre, idPartida) VALUES ('B6',4018);";
+                    string Query2 = "INSERT INTO bosdb.cartajugador (nombre, idPartida) VALUES ('" + cardsplayers[mIndex2] + "'," + idJugadores + ");";
+                    cardsplayers.RemoveAt(mIndex2);
 
                     conexion2 = new MySqlConnection(DataConecction2);
                     consola2 = new MySqlCommand(Query2, conexion2);
@@ -291,13 +318,10 @@ public class ShowIdMatch : MonoBehaviour
                     consola2.ExecuteReader();
                     conexion2.Close();
                 }
-                catch (MySqlException exe)
-                {
+                
 
-                    Debug.LogError("Error: " + exe);
-                }
             }
-            
+
 
             conexion.Close();
 
