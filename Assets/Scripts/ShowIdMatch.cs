@@ -107,16 +107,37 @@ public class ShowIdMatch : MonoBehaviour
         cardsplayers.Add("R8");
         cardsplayers.Add("R9");
 
-        cardsplayers.Add("RegA");
-        cardsplayers.Add("RegC");
-        cardsplayers.Add("RegJ");
-        cardsplayers.Add("RegM");
-        cardsplayers.Add("RegP");
-        cardsplayers.Add("RegU");
-        cardsplayers.Add("RegK");
-        cardsplayers.Add("RegN");
-        cardsplayers.Add("RegR");
-        cardsplayers.Add("RegV");
+        cardsplayers.Add("RegA0");
+        cardsplayers.Add("RegA1");
+        cardsplayers.Add("RegA2");
+        cardsplayers.Add("RegC0");
+        cardsplayers.Add("RegC1");
+        cardsplayers.Add("RegC2");
+        cardsplayers.Add("RegJ0");
+        cardsplayers.Add("RegJ1");
+        cardsplayers.Add("RegJ2");
+        cardsplayers.Add("RegM0");
+        cardsplayers.Add("RegM1");
+        cardsplayers.Add("RegM2");
+        cardsplayers.Add("RegP0");
+        cardsplayers.Add("RegP1");
+        cardsplayers.Add("RegP2");
+        cardsplayers.Add("RegU0");
+        cardsplayers.Add("RegU1");
+        cardsplayers.Add("RegU2");
+        cardsplayers.Add("RegK0");
+        cardsplayers.Add("RegK1");
+        cardsplayers.Add("RegK2");
+        cardsplayers.Add("RegN0");
+        cardsplayers.Add("RegN1");
+        cardsplayers.Add("RegN2");
+        cardsplayers.Add("RegR0");
+        cardsplayers.Add("RegR1");
+        cardsplayers.Add("RegR2");
+        cardsplayers.Add("RegV0");
+        cardsplayers.Add("RegV1");
+        cardsplayers.Add("RegV2");
+        
     }
 
     public float timeRemaining = 1;
@@ -234,7 +255,7 @@ public class ShowIdMatch : MonoBehaviour
                 int mIndex = Random.Range(0, 39);
 
                 string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cards[mIndex] + "'," + r + ");";
+                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cardspiramide[mIndex] + "'," + r + ");";
 
 
                 conexion = new MySqlConnection(DataConecction);
