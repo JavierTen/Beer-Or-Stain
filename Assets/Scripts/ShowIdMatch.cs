@@ -1,29 +1,75 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Random;
 using UnityEngine.UI;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System;
 
 
+
 public class ShowIdMatch : MonoBehaviour
 {
     private MySqlConnection conexion;
     private MySqlCommand consola;
-
+    int r;
     public Text idPartida;
     public Text jugadores;
+
+    ArrayList cards = new ArrayList();
+
 
     void Start()
     {
         MostrarIdPartida();
+        
+        cards.Add("B0");
+        cards.Add("B1");
+        cards.Add("B2");
+        cards.Add("B3");
+        cards.Add("B4");
+        cards.Add("B5");
+        cards.Add("B6");
+        cards.Add("B7");
+        cards.Add("B8");
+        cards.Add("B9");
+        cards.Add("Y0");
+        cards.Add("Y1");
+        cards.Add("Y2");
+        cards.Add("Y3");
+        cards.Add("Y4");
+        cards.Add("Y5");
+        cards.Add("Y6");
+        cards.Add("Y7");
+        cards.Add("Y8");
+        cards.Add("Y9");
+        cards.Add("G0");
+        cards.Add("G1");
+        cards.Add("G2");
+        cards.Add("G3");
+        cards.Add("G4");
+        cards.Add("G5");
+        cards.Add("G6");
+        cards.Add("G7");
+        cards.Add("G8");
+        cards.Add("G9");
+        cards.Add("R0");
+        cards.Add("R1");
+        cards.Add("R2");
+        cards.Add("R3");
+        cards.Add("R4");
+        cards.Add("R5");
+        cards.Add("R6");
+        cards.Add("R7");
+        cards.Add("R8");
+        cards.Add("R9");
     }
+
+
 
     public float timeRemaining = 1;
     private bool gamerunning;
-    ArrayList jugador = new ArrayList();
-    //static var dPartida;
 
     void Update()
     {
@@ -38,9 +84,9 @@ public class ShowIdMatch : MonoBehaviour
                 timeRemaining = 1;
                 try
                 {
-                    Debug.Log(idPartida);
+                    
                     string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-                    string Query = "SELECT nombre FROM bosdb.jugador where idPartida = 4018;";
+                    string Query = "SELECT nombre FROM bosdb.jugador where idPartida = "+r+";";
 
                     conexion = new MySqlConnection(DataConecction);
                     consola = new MySqlCommand(Query, conexion);
@@ -56,11 +102,7 @@ public class ShowIdMatch : MonoBehaviour
                         
                     }
                     jugadores.text = nicks.ToString();
-                    foreach (var item in jugador)
-                    {
-                        Debug.Log(item);
-                    }
-                    //Debug.Log(jugador);
+                    
                     conexion.Close();
 
                 }
@@ -91,7 +133,7 @@ public class ShowIdMatch : MonoBehaviour
             object result = consola.ExecuteScalar();
             if (result != null)
             {
-                int r = Convert.ToInt32(result);
+                r = Convert.ToInt32(result);
                 Debug.Log("ultima partida: " + r);
                 idPartida.text = r.ToString();
                 
@@ -105,4 +147,63 @@ public class ShowIdMatch : MonoBehaviour
             Debug.LogError("Error: " + ex);
         }
     }
+
+    public void ActualizarEstado()
+    {
+        try
+        {
+
+            string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
+            string Query = "UPDATE bosdb.partida SET estado = 1 WHERE idPartida = "+r+";";
+
+            conexion = new MySqlConnection(DataConecction);
+            consola = new MySqlCommand(Query, conexion);
+
+            conexion.Open();
+            consola.ExecuteScalar();
+            conexion.Close();
+
+        }
+        catch (MySqlException ex)
+        {
+
+            Debug.LogError("Error: " + ex);
+        }
+    }
+
+    //public void RepartirCartas()
+    //{
+    //    try
+    //    {
+
+    //        for (int i = 0; i < 15; i++)
+    //        {
+
+    //            int mIndex = Random.Range(0,39);
+                
+    //            string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
+    //            string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cards[mIndex] + "',"+r+");";
+                
+
+    //            conexion = new MySqlConnection(DataConecction);
+    //            consola = new MySqlCommand(Query, conexion);
+
+    //            conexion.Open();
+    //            consola.ExecuteReader();
+    //            conexion.Close();
+    //        }
+
+            
+            
+
+    //        conexion.Close();
+
+
+    //    }
+    //    catch (MySqlException ex)
+    //    {
+
+    //        Debug.LogError("Error: " + ex);
+    //    }
+    //}
 }

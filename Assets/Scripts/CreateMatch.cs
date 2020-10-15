@@ -14,7 +14,7 @@ public class CreateMatch : MonoBehaviour
         try
         {
             string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-            string Query = "INSERT INTO bosdb.partida SET idPartida = NULL";
+            string Query = "INSERT INTO bosdb.partida(estado) VALUES (0);";
 
             conexion = new MySqlConnection(DataConecction);
             consola = new MySqlCommand(Query, conexion);
@@ -30,4 +30,6 @@ public class CreateMatch : MonoBehaviour
             Debug.LogError("Error: " + ex);
         }
     }
+
+
 }
