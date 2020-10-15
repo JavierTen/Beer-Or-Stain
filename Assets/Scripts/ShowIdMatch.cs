@@ -171,39 +171,40 @@ public class ShowIdMatch : MonoBehaviour
         }
     }
 
-    //public void RepartirCartas()
-    //{
-    //    try
-    //    {
+    public void RepartirCartas()
+    {
+        try
+        {
 
-    //        for (int i = 0; i < 15; i++)
-    //        {
+            for (int i = 0; i < 15; i++)
+            {
 
-    //            int mIndex = Random.Range(0,39);
-                
-    //            string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-    //            string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cards[mIndex] + "',"+r+");";
-                
+                int mIndex = Random.Range(0, 39);
 
-    //            conexion = new MySqlConnection(DataConecction);
-    //            consola = new MySqlCommand(Query, conexion);
-
-    //            conexion.Open();
-    //            consola.ExecuteReader();
-    //            conexion.Close();
-    //        }
-
-            
-            
-
-    //        conexion.Close();
+                string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
+                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cards[mIndex] + "'," + r + ");";
 
 
-    //    }
-    //    catch (MySqlException ex)
-    //    {
+                conexion = new MySqlConnection(DataConecction);
+                consola = new MySqlCommand(Query, conexion);
 
-    //        Debug.LogError("Error: " + ex);
-    //    }
-    //}
+                conexion.Open();
+                consola.ExecuteReader();
+                conexion.Close();
+            }
+
+
+
+
+
+            //-------------------------
+            ActualizarEstado();
+
+        }
+        catch (MySqlException ex)
+        {
+
+            Debug.LogError("Error: " + ex);
+        }
+    }
 }
