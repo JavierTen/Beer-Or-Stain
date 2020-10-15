@@ -899,8 +899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000016104, y: -236.07715}
-  m_SizeDelta: {x: 241.58728, y: 913.25244}
+  m_AnchoredPosition: {x: 0, y: -210}
+  m_SizeDelta: {x: 236.58844, y: 882.00964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712081952
 MonoBehaviour:
@@ -934,7 +934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nUn grano de cacao es la semilla fermentada y secada del Theobroma cacao,
+  m_Text: "Un grano de cacao es la semilla fermentada y secada del Theobroma cacao,
     del cual se extraen los s\xF3lidos de cacao y la manteca de cacao. Los granos
     son la base del chocolate, como tambi\xE9n diversas comidas Mesoamericanas como
     la salsa de mole y el tejate.Un grano de cacao es la semilla fermentada y secada
@@ -1145,8 +1145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.899994, y: -85}
-  m_SizeDelta: {x: -60.70044, y: -189.05392}
+  m_AnchoredPosition: {x: 10, y: -74}
+  m_SizeDelta: {x: -58.20108, y: -211.5487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637908019
 MonoBehaviour:
@@ -1315,8 +1315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129.28, y: 9.4536}
-  m_SizeDelta: {x: 16.968609, y: 422.19263}
+  m_AnchoredPosition: {x: 136.9, y: 23}
+  m_SizeDelta: {x: 14.469227, y: 429.69092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868302569
 MonoBehaviour:
@@ -1360,8 +1360,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1426215913}
   m_HandleRect: {fileID: 1426215912}
   m_Direction: 2
-  m_Value: 1.0000018
-  m_Size: 0.48299876
+  m_Value: 0.7737639
+  m_Size: 0.13029943
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1438,8 +1438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.11483, y: -16.577}
-  m_SizeDelta: {x: 275.52924, y: 441.0998}
+  m_AnchoredPosition: {x: -6, y: -46}
+  m_SizeDelta: {x: 101.81943, y: 114.925354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1911990472
 MonoBehaviour:
