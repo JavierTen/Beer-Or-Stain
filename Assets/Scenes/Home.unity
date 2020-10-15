@@ -263,10 +263,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c57cde326e0f24c8d4fe25b87ce504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BotonU: {fileID: 0}
-  Crear: {fileID: 0}
-  texto_cuadro: {fileID: 0}
-  cuadro: {fileID: 0}
+  BotonU: {fileID: 696548638}
+  Crear: {fileID: 571876092}
+  texto_cuadro: {fileID: 712081952}
+  cuadro: {fileID: 1637908017}
 --- !u!1 &49650764
 GameObject:
   m_ObjectHideFlags: 0
