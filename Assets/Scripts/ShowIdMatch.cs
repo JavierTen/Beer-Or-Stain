@@ -223,7 +223,7 @@ public class ShowIdMatch : MonoBehaviour
         }
     }
 
-    public void RepartirCartas()
+    public void RepartirCartasPiramide()
     {
         try
         {
@@ -234,7 +234,9 @@ public class ShowIdMatch : MonoBehaviour
                 int mIndex = Random.Range(0, 39);
 
                 string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cards[mIndex] + "'," + r + ");";
+
+                string Query = "INSERT INTO bosdb.cartapiramide (nombreCarta, idPartida) VALUES ('" + cardspiramide[mIndex] + "'," + r + ");";
+                cardspiramide.RemoveAt(mIndex);
 
 
                 conexion = new MySqlConnection(DataConecction);
@@ -245,12 +247,59 @@ public class ShowIdMatch : MonoBehaviour
                 conexion.Close();
             }
 
-
-
-
-
             //-------------------------
             ActualizarEstado();
+
+        }
+        catch (MySqlException ex)
+        {
+
+            Debug.LogError("Error: " + ex);
+        }
+    }
+
+    public void RepartirCartasJugador()
+    {
+        try
+        {
+
+            string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
+            string Query = "SELECT idJugador FROM bosdb.jugador WHERE idPartida = "+r+";";
+
+            conexion = new MySqlConnection(DataConecction);
+            consola = new MySqlCommand(Query, conexion);
+
+
+
+            string idJugadores = "";
+            conexion.Open();
+            MySqlDataReader reader = consola.ExecuteReader();
+            while (reader.Read())
+            {
+                idJugadores = reader["idJugador"].ToString();
+
+                try
+                {
+                    int mIndex = Random.Range(0, 69);
+                    string DataConecction2 = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
+                    string Query2 = "INSERT INTO bosdb.cartajugador (nombre, idPartida) VALUES ('B6',4018);";
+
+                    conexion2 = new MySqlConnection(DataConecction2);
+                    consola2 = new MySqlCommand(Query2, conexion2);
+
+                    conexion2.Open();
+                    consola2.ExecuteReader();
+                    conexion2.Close();
+                }
+                catch (MySqlException exe)
+                {
+
+                    Debug.LogError("Error: " + exe);
+                }
+            }
+            
+
+            conexion.Close();
 
         }
         catch (MySqlException ex)
