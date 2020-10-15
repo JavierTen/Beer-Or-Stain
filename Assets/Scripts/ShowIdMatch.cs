@@ -12,7 +12,7 @@ public class ShowIdMatch : MonoBehaviour
 {
     private MySqlConnection conexion;
     private MySqlCommand consola;
-    int r;
+    string r = "";
     public Text idPartida;
     public Text jugadores;
 
@@ -128,16 +128,16 @@ public class ShowIdMatch : MonoBehaviour
             conexion = new MySqlConnection(DataConecction);
             consola = new MySqlCommand(Query, conexion);
 
-            int r = Random.Range(0,3);
+            //int r = Random.Range(0,3);
 
             conexion.Open();
-            object result = consola.ExecuteScalar();
-            if (result != null)
+            MySqlDataReader reader = consola.ExecuteReader();
+            while (reader.Read())
             {
-                
-                idPartida.text = r.ToString();
-                
+                r = reader["idPartida"].ToString();
+
             }
+            idPartida.text = r;
             conexion.Close();
 
         }
