@@ -257,7 +257,7 @@ public class ShowIdMatch : MonoBehaviour
             for (int i = 0; i < 15; i++)
             {
 
-                int mIndex = Random.Range(0, 39);
+                int mIndex = Random.Range(0, cardspiramide.Count);
 
                 string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
 
@@ -274,7 +274,7 @@ public class ShowIdMatch : MonoBehaviour
             }
 
             //-------------------------
-            ActualizarEstado();
+            
 
         }
         catch (MySqlException ex)
@@ -304,11 +304,12 @@ public class ShowIdMatch : MonoBehaviour
             {
 
                 idJugadores = reader["idJugador"].ToString();
+                Debug.Log(idJugadores);
                 for (int i = 0; i < 5; i++)
                 {
-                    int mIndex2 = Random.Range(0, 69);
+                    int mIndex2 = Random.Range(0, cardsplayers.Count);
                     string DataConecction2 = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
-                    string Query2 = "INSERT INTO bosdb.cartajugador (nombre, idPartida) VALUES ('" + cardsplayers[mIndex2] + "'," + idJugadores + ");";
+                    string Query2 = "INSERT INTO bosdb.cartajugador (nombre, idPartida, idJugador) VALUES ('" + cardsplayers[mIndex2] + "'," + r + ","+ idJugadores + ");";
                     cardsplayers.RemoveAt(mIndex2);
 
                     conexion2 = new MySqlConnection(DataConecction2);
@@ -324,6 +325,7 @@ public class ShowIdMatch : MonoBehaviour
 
 
             conexion.Close();
+            ActualizarEstado();
 
         }
         catch (MySqlException ex)
