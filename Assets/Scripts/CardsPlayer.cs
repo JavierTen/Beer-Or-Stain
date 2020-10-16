@@ -53,9 +53,6 @@ public class CardsPlayer : MonoBehaviour
 
     public void LanzarCarta(){
 
-        Debug.Log(DatosGlobales.CartaJugador);
-        Debug.Log(DatosGlobales.CartaMostrada);
-
         if (cardsJugador[item].ToString() == DatosGlobales.CartaMostrada)
         {
            GetComponent<Button>().interactable = false; 
