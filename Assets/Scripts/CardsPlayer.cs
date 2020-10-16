@@ -4,9 +4,9 @@ using UnityEngine;
 using MySql.Data.MySqlClient;
 using System.Data;
 using UnityEngine.UI;
+
 public class CardsPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Image UIImagen;
     private MySqlConnection conexion;
     private MySqlCommand consola;
@@ -59,4 +59,5 @@ public class CardsPlayer : MonoBehaviour
         }
           
     }
+  
 }

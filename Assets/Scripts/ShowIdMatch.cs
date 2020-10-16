@@ -216,6 +216,7 @@ public class ShowIdMatch : MonoBehaviour
 
             }
             idPartida.text = r;
+            DatosGlobales.IdPartida = r;
             conexion.Close();
 
         }
