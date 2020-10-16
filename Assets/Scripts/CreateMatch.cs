@@ -23,8 +23,6 @@ public class CreateMatch : MonoBehaviour
             consola.ExecuteReader();
             conexion.Close();
 
-            
-
         }
         catch (MySqlException ex)
         {

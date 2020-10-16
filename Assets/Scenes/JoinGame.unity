@@ -231,10 +231,10 @@ RectTransform:
   m_Father: {fileID: 1208163578}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.011353, y: -0.0018768}
-  m_SizeDelta: {x: 244.9029, y: 48.124786}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0009765625, y: -0.00012207031}
+  m_SizeDelta: {x: -11179.956, y: -2689.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57518993
 MonoBehaviour:
@@ -262,7 +262,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
@@ -276,7 +276,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57518991}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &146704836
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +722,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 681722323}
+        m_MethodName: Showtext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &532721577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,12 +784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nick: {fileID: 1761820199}
   partida: {fileID: 1201731514}
-  cuadro: {fileID: 1208163577}
-  button: {fileID: 532721574}
   timeRemaining: 1
-  nickJugador: 
-  idpartida: 0
-  variableA: 
 --- !u!1 &584047534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1208163578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1162,8 +1168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -42}
-  m_SizeDelta: {x: 11929.004, y: 2344.122}
+  m_AnchoredPosition: {x: 0, y: -46}
+  m_SizeDelta: {x: 11477.277, y: 2713.8179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208163579
 MonoBehaviour:
@@ -1247,7 +1253,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.01
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1208163581
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &92144341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -498,7 +498,6 @@ GameObject:
   - component: {fileID: 146706726}
   - component: {fileID: 146706725}
   - component: {fileID: 146706724}
-  - component: {fileID: 146706727}
   m_Layer: 5
   m_Name: Btn_C3
   m_TagString: Untagged
@@ -522,8 +521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -178}
-  m_SizeDelta: {x: 746.2471, y: 1085.8751}
+  m_AnchoredPosition: {x: -5, y: -131.9}
+  m_SizeDelta: {x: 576.46484, y: 818.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146706724
 MonoBehaviour:
@@ -567,18 +566,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 146706725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 146706727}
-        m_MethodName: LanzarCarta
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &146706725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,20 +604,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146706722}
   m_CullTransparentMesh: 0
---- !u!114 &146706727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146706722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7f2b15f8d79a54da63363ef395f076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: 2
-  boton: Btn_C3
 --- !u!1 &363143603
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +694,6 @@ GameObject:
   - component: {fileID: 621584160}
   - component: {fileID: 621584159}
   - component: {fileID: 621584158}
-  - component: {fileID: 621584161}
   m_Layer: 5
   m_Name: Btn_C2
   m_TagString: Untagged
@@ -744,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.9, y: -165.80002}
-  m_SizeDelta: {x: 746.2471, y: 1085.8751}
+  m_AnchoredPosition: {x: -66.4, y: -129.1}
+  m_SizeDelta: {x: 576.46484, y: 818.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621584158
 MonoBehaviour:
@@ -789,18 +762,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 621584159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 621584161}
-        m_MethodName: LanzarCarta
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &621584159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,20 +800,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621584156}
   m_CullTransparentMesh: 0
---- !u!114 &621584161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621584156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7f2b15f8d79a54da63363ef395f076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: 1
-  boton: Btn_C2
 --- !u!1 &798264117
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +862,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 11.98, y: 16.95}
+  m_Size: {x: 1.9, y: 2.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -946,6 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac169051a1610c043a7abe5303981a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardNew: {fileID: 21300000, guid: 46b833e0176aba640a3a0020507095d0, type: 3}
   timeRemaining: 10
 --- !u!1 &1004299202
 GameObject:
@@ -1165,7 +1114,6 @@ GameObject:
   - component: {fileID: 1717038179}
   - component: {fileID: 1717038178}
   - component: {fileID: 1717038177}
-  - component: {fileID: 1717038180}
   m_Layer: 5
   m_Name: Btn_C1
   m_TagString: Untagged
@@ -1189,8 +1137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.212001}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148, y: -193}
-  m_SizeDelta: {x: 746.2471, y: 1085.8751}
+  m_AnchoredPosition: {x: -120.3, y: -149.1}
+  m_SizeDelta: {x: 576.46484, y: 818.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717038177
 MonoBehaviour:
@@ -1234,18 +1182,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1717038178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1717038180}
-        m_MethodName: LanzarCarta
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1717038178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,20 +1220,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717038175}
   m_CullTransparentMesh: 0
---- !u!114 &1717038180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1717038175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7f2b15f8d79a54da63363ef395f076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: 0
-  boton: Btn_C1
 --- !u!1 &1941444259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1232,6 @@ GameObject:
   - component: {fileID: 1941444263}
   - component: {fileID: 1941444262}
   - component: {fileID: 1941444261}
-  - component: {fileID: 1941444264}
   m_Layer: 5
   m_Name: Btn_C5
   m_TagString: Untagged
@@ -1333,8 +1255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.313002}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 156.9, y: -200.30002}
-  m_SizeDelta: {x: 746.2471, y: 1085.8751}
+  m_AnchoredPosition: {x: 114.6, y: -156.6}
+  m_SizeDelta: {x: 576.46484, y: 818.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941444261
 MonoBehaviour:
@@ -1378,18 +1300,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1941444262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1941444264}
-        m_MethodName: LanzarCarta
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1941444262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,20 +1338,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941444259}
   m_CullTransparentMesh: 0
---- !u!114 &1941444264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941444259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7f2b15f8d79a54da63363ef395f076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: 4
-  boton: Btn_C5
 --- !u!1 &1970838345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1350,6 @@ GameObject:
   - component: {fileID: 1970838349}
   - component: {fileID: 1970838348}
   - component: {fileID: 1970838347}
-  - component: {fileID: 1970838350}
   m_Layer: 5
   m_Name: Btn_C4
   m_TagString: Untagged
@@ -1477,8 +1373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.067}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.3, y: -161.10002}
-  m_SizeDelta: {x: 746.2471, y: 1085.8751}
+  m_AnchoredPosition: {x: 56.2, y: -126.5}
+  m_SizeDelta: {x: 576.46484, y: 818.3004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970838347
 MonoBehaviour:
@@ -1522,18 +1418,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1970838348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1970838350}
-        m_MethodName: LanzarCarta
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1970838348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,20 +1456,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970838345}
   m_CullTransparentMesh: 0
---- !u!114 &1970838350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970838345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7f2b15f8d79a54da63363ef395f076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: 3
-  boton: Btn_C4
 --- !u!1 &2134151522
 GameObject:
   m_ObjectHideFlags: 0

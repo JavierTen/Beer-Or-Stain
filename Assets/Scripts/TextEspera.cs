@@ -16,7 +16,7 @@ public class TextEspera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cuadro.SetActive(false);
         
     }
 
