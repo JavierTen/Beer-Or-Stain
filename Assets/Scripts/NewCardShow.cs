@@ -97,7 +97,7 @@ public class NewCardShow : MonoBehaviour
                 timeRemaining = 20;
                 if (i < 5)
                 {
-                    DatosGlobales.CartaMostrada = cardspiramide[i].ToString();
+                    
                     rend = GetComponent<SpriteRenderer>();
                     cardNew = Resources.Load<Sprite>("Images/" + cardspiramide[i] + "");
                     rend.sprite = cardNew;
@@ -105,16 +105,13 @@ public class NewCardShow : MonoBehaviour
                     transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
                 }
 
+                timeRemaining = 10;
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = cardNew;
+                transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
             }
         }
 
     }
-
-    void CartaMostrar()
-    {
-
-    }
-
     public void ChangeGameRunningState()
     {
         gamerunning = !gamerunning;
