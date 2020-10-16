@@ -23,34 +23,15 @@ public class NewCardShow : MonoBehaviour
             }
             else
             {
-<<<<<<< Updated upstream
                 timeRemaining = 10;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = cardNew;
                 transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
-=======
-                timeRemaining = 20;
-                if (i < 5)
-                {
-                    DatosGlobales.CartaMostrada = cardspiramide[i].ToString();
-                    rend = GetComponent<SpriteRenderer>();
-                    cardNew = Resources.Load<Sprite>("Images/" + cardspiramide[i]);
-                    rend.sprite = cardNew;
-                    i = i+1;
-                    transform.localScale = new Vector3(0.2156625f, 0.2178207f, 1f);
-                }
-
->>>>>>> Stashed changes
             }
         }
         
         
 
     }
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes
     public void ChangeGameRunningState()
     {
         
