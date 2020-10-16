@@ -15,11 +15,16 @@ public class JoinMatch : MonoBehaviour
     public InputField nick;
     public InputField partida;
 
+    public GameObject cuadro;
+    public GameObject button;
 
     public float timeRemaining = 1;
     private bool gamerunning;
 
-    private string idpartida = "0";
+    public string nickJugador;
+    public string idpartida = "0";
+
+    public string variableA;
 
     void Update()
     {
@@ -47,6 +52,7 @@ public class JoinMatch : MonoBehaviour
                     while (reader.Read())
                     {
                         estado = reader["estado"].ToString();
+                                        
                         
                     }
                     if (estado == "1")
@@ -74,7 +80,11 @@ public class JoinMatch : MonoBehaviour
             string DataConecction = "Server=beerorstain20.mysql.database.azure.com; Port=3306; Database=bosdb; Uid=adminbos@beerorstain20; Pwd=*camaja20*; SslMode=Preferred;";
             string Query = "INSERT INTO bosdb.jugador VALUES (NULL, '"+ nick.text + "',"+ partida.text + ");";
             idpartida = partida.text;
-
+            nickJugador = nick.text;
+            DatoUsuarios.Nick = nickJugador;
+            DatoUsuarios.idPartida = idpartida;
+            cuadro.SetActive(true);
+            GetComponent<Button>().interactable = false;          
             conexion = new MySqlConnection(DataConecction);
             consola = new MySqlCommand(Query, conexion);
 
@@ -91,3 +101,5 @@ public class JoinMatch : MonoBehaviour
         }
     }
 }
+
+
